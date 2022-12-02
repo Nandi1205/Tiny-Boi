@@ -13,18 +13,30 @@ module.exports = (interaction) => {
 
   //////////
 
+  const RULES = interaction.options.getString('rules').split('\\n')
+  let rulesString = ''
+
+  for (let i = 0; i < RULES.length; i++) {
+    rulesString += `${i + 1}. ${RULES[i]}\n`
+  }
+  rulesString += '\n' + (interaction.options.getString('info')?.replaceAll('\\n', '\n') ?? '')
+
+  if (rulesString.length > 4096) return error(interaction, 'After formatting, your input became longer than 4096 characters. Try sending a shorter command.')
+
+  //////////
+
   interaction.channel.send({
     embeds: [
       makeEmbed()
       .setTitle(TITLE)
-      .setDescription(interaction.options.getString('message').replaceAll('\\n', '\n'))
+      .setDescription(rulesString)
     ]
   })
   interaction.reply({
     embeds: [
       makeEmbed()
-      .setTitle('📢 Announce')
-      .setDescription('Announcement successfully sent. Wait a bit for it to show up.')
+      .setTitle('📜 Rules')
+      .setDescription('Rules successfully sent. Wait a bit for the embed to show up.')
     ],
     ephemeral: true
   })

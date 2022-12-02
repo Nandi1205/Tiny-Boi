@@ -15,11 +15,38 @@
       {
         "name": "title",
         "description": "The title of the message.",
-        "type": 3
+        "type": 3,
+        "required": true
       },
       {
         "name": "message",
         "description": "The message to send. Use \"\\n\" for newlines.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "default_member_permissions": 4,
+    "dm_permission": false
+  },
+  {
+    "name": "rules",
+    "description": "Send formatted rules in the current channel.",
+    "options": [
+      {
+        "name": "title",
+        "description": "The title of the rules embed.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "rules",
+        "description": "The rules. Use \"\\n\" for separating rules.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "info",
+        "description": "A small disclaimer right after the rules. Use \"\\n\" for newlines.",
         "type": 3
       }
     ],

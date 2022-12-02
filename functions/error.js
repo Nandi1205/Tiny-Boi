@@ -10,5 +10,5 @@ module.exports = (interaction, errorMessage) => {
     ephemeral: true
   })
 
-  return true
+  return false
 }
