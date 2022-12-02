@@ -1,0 +1,29 @@
+[
+  {
+    "name": "info",
+    "description": "About the bot.",
+    "options": [{
+      "name": "private",
+      "description": "Only show the reply to you. (False)",
+      "type": 5
+    }]
+  },
+  {
+    "name": "announce",
+    "description": "Send an announcement in the current channel.",
+    "options": [
+      {
+        "name": "title",
+        "description": "The title of the message.",
+        "type": 3
+      },
+      {
+        "name": "message",
+        "description": "The message to send. Use \"\\n\" for newlines.",
+        "type": 3
+      }
+    ],
+    "default_member_permissions": 4,
+    "dm_permission": false
+  }
+]

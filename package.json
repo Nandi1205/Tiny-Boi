@@ -1,0 +1,15 @@
+{
+  "name": "tiny-boi",
+  "version": "0.0.1",
+  "description": "I manage roles and handle server messages for The Coziest Tent Discord server.",
+  "main": "main.js",
+  "author": "Nandi1205",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0"
+  }
+}
