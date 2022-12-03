@@ -3,6 +3,7 @@ require('dotenv').config()
 const fs = require('fs')
 const {Client, GatewayIntentBits, InteractionType} = require('discord.js')
 const commands = require('./commands.json')
+const roleselectorInteraction = require('./functions/roleselector-interaction')
 
 const client = new Client({intents: [GatewayIntentBits.Guilds]})
 let commandFunctions = {}
@@ -20,6 +21,7 @@ client.once('ready', async () => {
 
 client.on('interactionCreate', (interaction) => {
   if (interaction.type === InteractionType.ApplicationCommand) commandFunctions[interaction.commandName](interaction)
+  else if (interaction.type === InteractionType.MessageComponent && interaction.customId === 'roleselector') roleselectorInteraction(interaction)
 })
 
 client.login(process.env.TOKEN)

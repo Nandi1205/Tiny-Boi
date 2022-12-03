@@ -9,7 +9,7 @@ module.exports = (interaction) => {
 
   const TITLE = interaction.options.getString('title')
 
-  if (TITLE.length > 256) return error(interaction, 'After formatting, your title became longer than 256 characters. Try using a shorter title.')
+  if (TITLE.length > 256) return error(interaction, 'Your title is longer than 256 characters. Try using a shorter title.')
 
   //////////
 

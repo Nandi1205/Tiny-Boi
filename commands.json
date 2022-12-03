@@ -52,5 +52,30 @@
     ],
     "default_member_permissions": 4,
     "dm_permission": false
+  },
+  {
+    "name": "roleselector",
+    "description": "Create a roleselector in the current channel.",
+    "options": [
+      {
+        "name": "title",
+        "description": "The title of the roleselector.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "roles",
+        "description": "The roles to be able to select. Use \"\\n\" for separating roles.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "multiselect",
+        "description": "Allow multiple roles to be selected. (False)",
+        "type": 5
+      }
+    ],
+    "default_member_permissions": 4,
+    "dm_permission": false
   }
 ]
