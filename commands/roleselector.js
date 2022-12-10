@@ -1,6 +1,6 @@
 const {ActionRowBuilder, StringSelectMenuBuilder} = require('discord.js')
+const hasSendPerms = require('../functions/perms/has-send-perms.js')
 const error = require('../functions/error.js')
-const hasSendPerms = require('../functions/has-send-perms.js')
 const makeEmbed = require('../functions/make-embed.js')
 
 module.exports = (interaction) => {
@@ -9,7 +9,6 @@ module.exports = (interaction) => {
   //////////
 
   const TITLE = interaction.options.getString('title')
-
   if (TITLE.length > 256) return error(interaction, 'Your title is longer than 256 characters. Try using a shorter title.')
 
   //////////

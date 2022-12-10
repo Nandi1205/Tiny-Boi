@@ -1,4 +1,4 @@
-const hasRolePerms = require('../functions/has-role-perms.js')
+const hasRolePerms = require('../functions/perms/has-role-perms.js')
 const makeEmbed = require('../functions/make-embed.js')
 
 module.exports = async (interaction) => {
@@ -27,12 +27,12 @@ module.exports = async (interaction) => {
     }
   }
 
+  let embed = makeEmbed().setTitle('📦 Roleselector')
+
   if (roleChangesString === '') {
     interaction.reply({
       embeds: [
-        makeEmbed()
-        .setTitle('📦 Roleselector')
-        .setDescription('Nothing changed.')
+        embed.setDescription('Nothing changed.')
       ],
       ephemeral: true
     })
@@ -46,9 +46,7 @@ module.exports = async (interaction) => {
 
   interaction.reply({
     embeds: [
-      makeEmbed()
-      .setTitle('📦 Roleselector')
-      .setDescription('Changed roles: ```diff\n' + roleChangesString + '```')
+      embed.setDescription('Changed roles: ```diff\n' + roleChangesString + '```')
     ],
     ephemeral: true
   })

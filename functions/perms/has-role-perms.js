@@ -1,5 +1,5 @@
 const {PermissionsBitField} = require('discord.js')
-const error = require('./error.js')
+const error = require('../error.js')
 
 module.exports = (interaction, channel) => {
   const BOT_PERMS = channel.permissionsFor(interaction.guild.members.me)

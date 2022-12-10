@@ -29,6 +29,32 @@
     "dm_permission": false
   },
   {
+    "name": "timed-announce",
+    "description": "Send a timed announcement in the current channel.",
+    "options": [
+      {
+        "name": "title",
+        "description": "The title of the message.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "message",
+        "description": "The message to send. Use \"\\n\" for newlines.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "wait",
+        "description": "Enter how many minutes to wait + rounding to the next hour.",
+        "type": 4,
+        "required": true
+      }
+    ],
+    "default_member_permissions": 4,
+    "dm_permission": false
+  },
+  {
     "name": "rules",
     "description": "Send formatted rules in the current channel.",
     "options": [
