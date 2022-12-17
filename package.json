@@ -1,6 +1,6 @@
 {
   "name": "tiny-boi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "I manage roles and handle server messages for The Coziest Tent Discord server.",
   "main": "main.js",
   "author": "Nandi1205",
