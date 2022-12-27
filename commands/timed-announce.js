@@ -1,9 +1,10 @@
 const hasSendPermsNoerror = require('../functions/perms/has-send-perms-noerror.js')
+const hasSendPerms = require('../functions/perms/has-send-perms.js')
 const error = require('../functions/error.js')
 const makeEmbed = require('../functions/make-embed.js')
 
 module.exports = (interaction) => {
-  if (!hasSendPermsNoerror(interaction, interaction.channel)) return
+  if (!hasSendPerms(interaction, interaction.channel)) return
 
   //////////
 

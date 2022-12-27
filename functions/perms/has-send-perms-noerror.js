@@ -1,10 +1,10 @@
-const {PermissionsBitField} = require('discord.js')
+const {PermissionFlagsBits} = require('discord.js')
 
 module.exports = (interaction, channel) => {
   const BOT_PERMS = channel.permissionsFor(interaction.guild.members.me)
 
-  if (!BOT_PERMS.has(PermissionsBitField.Flags.ViewChannel)) return false
-  else if (!BOT_PERMS.has(PermissionsBitField.Flags.SendMessages)) return false
-  else if (!BOT_PERMS.has(PermissionsBitField.Flags.EmbedLinks)) return false
+  if (!BOT_PERMS.has(PermissionFlagsBits.ViewChannel)) return false
+  else if (!BOT_PERMS.has(PermissionFlagsBits.SendMessages)) return false
+  else if (!BOT_PERMS.has(PermissionFlagsBits.EmbedLinks)) return false
   else return true
 }

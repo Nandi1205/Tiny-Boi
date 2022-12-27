@@ -54,7 +54,7 @@ module.exports = (interaction) => {
     embeds: [
       makeEmbed()
       .setTitle('📦 Roleselector')
-      .setDescription('Roleselector successfully set up. Wait a bit for it to show up.')
+      .setDescription('Roleselector successfully set up.')
     ],
     ephemeral: true
   })

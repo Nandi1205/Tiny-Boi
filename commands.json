@@ -20,7 +20,7 @@
         "required": true
       }
     ],
-    "default_member_permissions": 4,
+    "default_member_permissions": 0,
     "dm_permission": false
   },
   {
@@ -46,7 +46,7 @@
         "required": true
       }
     ],
-    "default_member_permissions": 4,
+    "default_member_permissions": 0,
     "dm_permission": false
   },
   {
@@ -71,7 +71,7 @@
         "type": 3
       }
     ],
-    "default_member_permissions": 4,
+    "default_member_permissions": 0,
     "dm_permission": false
   },
   {
@@ -96,7 +96,7 @@
         "type": 5
       }
     ],
-    "default_member_permissions": 4,
+    "default_member_permissions": 0,
     "dm_permission": false
   }
 ]

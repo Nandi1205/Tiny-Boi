@@ -23,7 +23,7 @@ module.exports = (interaction) => {
     embeds: [
       makeEmbed()
       .setTitle('📢 Announce')
-      .setDescription('Announcement successfully sent. Wait a bit for it to show up.')
+      .setDescription('Announcement successfully sent.')
     ],
     ephemeral: true
   })

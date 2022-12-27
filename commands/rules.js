@@ -35,7 +35,7 @@ module.exports = (interaction) => {
     embeds: [
       makeEmbed()
       .setTitle('📜 Rules')
-      .setDescription('Rules successfully sent. Wait a bit for the embed to show up.')
+      .setDescription('Rules successfully sent.')
     ],
     ephemeral: true
   })
