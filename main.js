@@ -1,7 +1,6 @@
-//require('dotenv').config()
+require('dotenv').config()
 
 const fs = require('fs')
-const replitMagic = require('./replit-magic.js')
 const {Client, GatewayIntentBits, InteractionType} = require('discord.js')
 const commands = require('./commands.json')
 const roleselectorInteraction = require('./functions/roleselector-interaction')
@@ -26,4 +25,3 @@ client.on('interactionCreate', (interaction) => {
 })
 
 client.login(process.env.TOKEN)
-replitMagic()
